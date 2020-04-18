@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+header {
+  font-family: "Baloo Bhaina 2", cursive;
+  font-size: 40px;
+  background-color: turquoise;
+  height: 70px;
+  line-height: 80px;
+  text-align: center;
+}
+
+#main-container {
+  font-family: "Baloo Bhaina 2", cursive;
+  right: 50%;
+  bottom: 50%;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  position: absolute;
+  background-color: turquoise;
+}
+/*# sourceMappingURL=index.css.map */
