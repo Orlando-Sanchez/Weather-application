@@ -1,5 +1,6 @@
 const input = document.querySelector('input');
 const search = document.getElementById('search');
+const mainData = document.getElementById('main-data')
 const dataContainer = document.getElementById('data-container');
 const btnContainer = document.getElementById('btn-container');
 const icon = document.getElementById('icon');
@@ -19,6 +20,7 @@ let fahrenheitData = [];
 let iconData = '';
 
 function obtainForecast() {
+  mainData.style.display = 'none';
   dataContainer.style.display = 'none';
   btnContainer.style.display = 'none';
   search.addEventListener('click', () => {
@@ -42,6 +44,7 @@ function fetchCelsius() {
     iconData = response.weather[0].icon;
     showData();
     showTemp(celsiusData, c);
+    mainData.style.display = 'flex';
     dataContainer.style.display = 'flex';
     btnContainer.style.display = 'flex'
   });
@@ -58,7 +61,7 @@ function fetchFahrenheit(){
 }
 
 function showData() {
-  document.querySelector('p').innerHTML = `${generalData[0]}`;
+  document.getElementById('city-name').innerHTML = `${generalData[0]}`;
   icon.src = `http://openweathermap.org/img/wn/${iconData}@2x.png`;
   desc.innerHTML = `${generalData[1]}`;
   humid.innerHTML = `${generalData[2]}%`;
