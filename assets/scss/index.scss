@@ -1,5 +1,11 @@
 $maincolor: turquoise;
 $font-stack: 'Baloo Bhaina 2', cursive;
+$blackborder: solid black;
+%horizon-align {
+  right: 50%;
+  transform: translate(50%,50%);
+  position: absolute;
+} 
 
 html {
   height: 100%;
@@ -14,17 +20,65 @@ body {
 header {
   font-family: $font-stack;
   font-size: 40px;
+  color: white;
   background-color: $maincolor;
   height: 70px;
   line-height: 80px;
   text-align: center;
+  border: 5px $blackborder;
+  border-radius: 2px;
 }
 
 #main-container {
+  @extend %horizon-align;
   font-family: $font-stack;
-  right: 50%;
-  bottom: 50%;
-  transform: translate(50%,50%);
-  position: absolute;
   background-color: $maincolor;
+  border: 5px $blackborder;
+  border-radius: 10px;
+  width: 500px;
+  height: 465px;
+  bottom: 45%;
+}
+
+.form-section {
+  height: 10%;
+  width: 100%;
+}
+
+.form {
+  @extend %horizon-align;
+  height: 90%;
+  bottom: 50%;
+  input {
+    border: 2px $blackborder;
+  };
+  button {
+    border: 2px $blackborder;
+    cursor: pointer;
+  }
+}
+
+.city-name {
+  height: 10%;
+  width: 100%;
+  p {
+    font-size: 55px;
+  }
+}
+
+#data-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  height: 60%;
+  width: 100%;
+  padding: 0 100px 0 116px;
+  li {
+    width: 40%;
+    font-size: 20px;
+  };
+  img {
+    width: 110px;
+    height: 100%;
+  }
 }

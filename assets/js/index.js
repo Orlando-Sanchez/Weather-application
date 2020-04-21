@@ -1,6 +1,7 @@
 const input = document.querySelector('input');
-const button = document.querySelector('button');
+const search = document.getElementById('search');
 const dataContainer = document.getElementById('data-container');
+const btnContainer = document.getElementById('btn-container');
 const icon = document.getElementById('icon');
 const temp = document.getElementById("temp");
 const desc = document.getElementById('desc');
@@ -17,21 +18,20 @@ let celsiusData = [];
 let fahrenheitData = [];
 let iconData = '';
 
-function getForecast() {
+function obtainForecast() {
   dataContainer.style.display = 'none';
-  celsius.style.display = 'none';
-  fahrenheit.style.display = 'none';
-  button.addEventListener('click', () => {
+  btnContainer.style.display = 'none';
+  search.addEventListener('click', () => {
     city = input.value;
-    getCelsius();
-    getFahrenheit();
+    fetchCelsius();
+    fetchFahrenheit();
     input.value = '';
     switchUnit();
     updateData();
   });
 }
 
-function getCelsius() {
+function fetchCelsius() {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=0f73843a5e932710846616394e675bdd`, {mode: 'cors'})
   .then(function(response) {
     return response.json();
@@ -42,13 +42,12 @@ function getCelsius() {
     iconData = response.weather[0].icon;
     showData();
     showTemp(celsiusData, c);
-    dataContainer.style.display = 'block';
-    celsius.style.display = 'inline-block';
-    fahrenheit.style.display = 'inline-block'
+    dataContainer.style.display = 'flex';
+    btnContainer.style.display = 'flex'
   });
 }
 
-function getFahrenheit(){
+function fetchFahrenheit(){
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=0f73843a5e932710846616394e675bdd`, {mode: 'cors'})
   .then(function(response) {
     return response.json();
@@ -59,7 +58,7 @@ function getFahrenheit(){
 }
 
 function showData() {
-  document.querySelector('h1').innerHTML = `${generalData[0]}`;
+  document.querySelector('p').innerHTML = `${generalData[0]}`;
   icon.src = `http://openweathermap.org/img/wn/${iconData}@2x.png`;
   desc.innerHTML = `${generalData[1]}`;
   humid.innerHTML = `${generalData[2]}%`;
@@ -81,8 +80,8 @@ function switchUnit() {
 } 
 
 function updateData() {
-  setInterval(getCelsius, 6000000);
-  setInterval(getFahrenheit, 6000000)
+  setInterval(fetchCelsius, 6000000);
+  setInterval(fetchFahrenheit, 6000000)
 }
 
-getForecast();
+obtainForecast();

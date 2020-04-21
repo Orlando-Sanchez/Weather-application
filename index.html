@@ -10,24 +10,28 @@
 <body>
   <header>THE WEATHER FORECAST</header>
   <div id="main-container">
-    <div id="form">
-      <input type="text" placeholder="Enter a city name" id="city-search" autofocus>
-      <button type="button" name="button" id="button">Search</button>
-    </div>  
-    <h1></h1>
+    <div class="form-section">
+      <div class="form">      
+        <input type="text" placeholder="Enter a city name" autofocus>
+        <button type="button" name="button" id="search">Search</button>
+      </div>
+    </div>
+    <div class="city-name">
+      <p></p>
+    </div>    
     <ul id="data-container">
       <li><img id="icon" src="" alt="icon"></li>
-      <li id="temp"></li>
-      <li>temperature</li>
       <li id="desc"></li>
+      <li>Temperature:</li>
+      <li id="temp"></li>
+      <li>Feels like:</li>
       <li id="feelslike"></li>
-      <li>feels like</li>
+      <li>Humidity:</li>
       <li id="humid"></li>
-      <li>humidity</li>
+      <li>Wind:</li>
       <li id="wind"></li>
-      <li>wind</li>
     </ul>
-    <div id="btn-container"></div>
+    <div id="btn-container">
       <button id="celsius">C°</button>
       <button id="fahrenheit">F°</button>
     </div>
