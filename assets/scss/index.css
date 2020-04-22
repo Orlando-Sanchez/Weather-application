@@ -1,4 +1,4 @@
-#main-container, .form {
+#main-container {
   right: 50%;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
@@ -18,7 +18,7 @@ body {
 header {
   font-family: "Baloo Bhaina 2", cursive;
   font-size: 40px;
-  color: white;
+  color: #E0FFFF;
   background-color: turquoise;
   height: 70px;
   line-height: 80px;
@@ -37,27 +37,33 @@ header {
   bottom: 45%;
 }
 
-.form-section {
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 10%;
   width: 100%;
 }
 
-.form {
-  height: 90%;
-  bottom: 50%;
-}
-
 .form input {
+  margin-top: 6px;
+  height: 38px;
   border: 2px solid black;
 }
 
 .form button {
+  margin-top: 6px;
+  height: 43.75px;
+  background-color: #AFEEEE;
   border: 2px solid black;
   cursor: pointer;
 }
 
 .form button:hover {
-  background-color: #0BB462;
+  background-color: turquoise;
 }
 
 #main-data {
@@ -123,14 +129,16 @@ header {
 }
 
 #btn-container button {
-  margin-top: 8px;
-  height: 80%;
+  background-color: #AFEEEE;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  height: 36px;
   border: 2px solid black;
   cursor: pointer;
-  width: 10%;
+  width: 12%;
 }
 
 #btn-container button:hover {
-  background-color: #0BB462;
+  background-color: turquoise;
 }
 /*# sourceMappingURL=index.css.map */

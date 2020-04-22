@@ -20,7 +20,7 @@ body {
 header {
   font-family: $font-stack;
   font-size: 40px;
-  color: white;
+  color: #E0FFFF;
   background-color: $maincolor;
   height: 70px;
   line-height: 80px;
@@ -44,24 +44,25 @@ header {
 
 // form
 
-.form-section {
+.form {
+  display: flex;
+  justify-content: center;
   height: 10%;
   width: 100%;
-}
-
-.form {
-  @extend %horizon-align;
-  height: 90%;
-  bottom: 50%;
   input {
+    margin-top: 6px;
+    height: 38px;
     border: 2px $blackborder;
   };
   button {
+    margin-top: 6px;
+    height: 43.75px;
+    background-color: #AFEEEE;
     border: 2px $blackborder;
     cursor: pointer;
   };
   button:hover {
-    background-color: #0BB462;
+    background-color: turquoise;
   }
 }
 
@@ -118,13 +119,15 @@ header {
   display: flex;
   justify-content: center;
   button {
-    margin-top: 8px;
-    height: 80%;
+    background-color: #AFEEEE;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    height: 36px;
     border: 2px $blackborder;
     cursor: pointer;
-    width: 10%;
+    width: 12%;
   };
   button:hover {
-    background-color: #0BB462;
+    background-color: turquoise;
   }
 }
