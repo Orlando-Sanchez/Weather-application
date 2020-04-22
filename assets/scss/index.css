@@ -56,6 +56,10 @@ header {
   cursor: pointer;
 }
 
+.form button:hover {
+  background-color: #0BB462;
+}
+
 #main-data {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -66,17 +70,17 @@ header {
 #main-data #city-name {
   font-size: 55px;
   margin: 0;
-  height: 50%;
+  height: 35%;
   width: 100%;
   text-align: center;
 }
 
 #main-data #img-cont {
   width: 50%;
-  height: 50%;
+  height: 65%;
 }
 
-#main-data #img-cont img {
+#main-data img {
   width: 50%;
   height: 100%;
   margin-left: 35%;
@@ -84,12 +88,13 @@ header {
 
 #main-data #desc-cont {
   width: 50%;
-  height: 50%;
+  height: 65%;
 }
 
-#main-data #desc-cont #desc {
+#main-data #desc {
   font-size: 20px;
   margin-left: 40px;
+  margin-top: 35px;
 }
 
 #data-container {
@@ -107,14 +112,25 @@ header {
   font-size: 20px;
 }
 
-#data-container #break {
-  width: 100%;
-  position: absolute;
-  margin-left: -116px;
-  margin-top: 110px;
-}
-
 #btn-container {
   height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#btn-container button {
+  margin-top: 8px;
+  height: 80%;
+  border: 2px solid black;
+  cursor: pointer;
+  width: 10%;
+}
+
+#btn-container button:hover {
+  background-color: #0BB462;
 }
 /*# sourceMappingURL=index.css.map */

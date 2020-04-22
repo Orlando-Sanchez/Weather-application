@@ -59,6 +59,9 @@ header {
   button {
     border: 2px $blackborder;
     cursor: pointer;
+  };
+  button:hover {
+    background-color: #0BB462;
   }
 }
 
@@ -71,26 +74,27 @@ header {
   #city-name {
     font-size: 55px;
     margin: 0;
-    height: 50%;
+    height: 35%;
     width: 100%;
     text-align: center;
   };
-    #img-cont {
+  #img-cont {
     width: 50%;
-    height: 50%;
-    img {
-      width: 50%;
-      height: 100%;
-      margin-left: 35%;
-    }
+    height: 65%;
+  };
+  img {
+    width: 50%;
+    height: 100%;
+    margin-left: 35%;
   };
   #desc-cont {
     width: 50%;
-    height: 50%;
-    #desc {
-      font-size: 20px;
-      margin-left: 40px;
-    }
+    height: 65%;
+  };
+  #desc {
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 35px;
   }
 }
 
@@ -107,17 +111,20 @@ header {
     width: 40%;
     font-size: 20px;
   };
-
-  #break {
-    width: 100%;
-    position: absolute;
-    margin-left: -116px;
-    margin-top: 110px;
-    // border: 5px $blackborder;
-    // border-radius: 10px;
-  }
 }
 
 #btn-container {
   height: 10%;
+  display: flex;
+  justify-content: center;
+  button {
+    margin-top: 8px;
+    height: 80%;
+    border: 2px $blackborder;
+    cursor: pointer;
+    width: 10%;
+  };
+  button:hover {
+    background-color: #0BB462;
+  }
 }
