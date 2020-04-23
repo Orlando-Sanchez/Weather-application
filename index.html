@@ -9,33 +9,35 @@
 </head>
 <body>
   <header>THE WEATHER FORECAST</header>
-  <div id="main-container">
-    <div class="form">    
-        <input type="text" placeholder="Enter city name" autofocus>
-        <button type="button" name="button" id="search">Search</button>
-    </div>
-    <div id="main-data">
-      <p id="city-name"></p>
-      <div id="img-cont"><img id="icon" src="" alt="icon"></div>
-      <div id="desc-cont">
-        <p id="desc"></p>
+  <main>
+    <div id="main-container">
+      <div class="form">    
+          <input type="text" placeholder="Enter city name" autofocus>
+          <button type="button" name="button" id="search">Search</button>
       </div>
-    </div>    
-    <ul id="data-container">
-      <li>Temperature:</li>
-      <li id="temp"></li>
-      <li>Feels like:</li>
-      <li id="feelslike"></li>
-      <li>Humidity:</li>
-      <li id="humid"></li>
-      <li>Wind:</li>
-      <li id="wind"></li>
-    </ul>
-    <div id="btn-container">
-      <button type="button" id="celsius" >C°</button>
-      <button type="button" id="fahrenheit" >F°</button>
+      <div id="main-data">
+        <p id="city-name"></p>
+        <div id="img-cont"><img id="icon" src="" alt="icon"></div>
+        <div id="desc-cont">
+          <p id="desc"></p>
+        </div>
+      </div>    
+      <ul id="data-container">
+        <li>Temperature:</li>
+        <li id="temp"></li>
+        <li>Feels like:</li>
+        <li id="feelslike"></li>
+        <li>Humidity:</li>
+        <li id="humid"></li>
+        <li>Wind:</li>
+        <li id="wind"></li>
+      </ul>
+      <div id="btn-container">
+        <button type="button" id="celsius" >C°</button>
+        <button type="button" id="fahrenheit" >F°</button>
+      </div>
     </div>
-  </div>
+  </main>
   <script src="assets/js/index.js"></script>
 </body>
 </html>
